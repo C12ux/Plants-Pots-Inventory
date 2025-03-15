@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #c9d6ff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.Controller">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <Text layoutX="227.0" layoutY="54.0" lineSpacing="0.24" strokeType="OUTSIDE" strokeWidth="0.0" text="USERS" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Futura Bold" size="25.0" />
+         </font>
+      </Text>
+      <Pane layoutX="233.0" layoutY="72.0" prefHeight="383.0" prefWidth="305.0" style="-fx-border-color: #230764;">
+         <children>
+            <TextField fx:id="userIDField" layoutX="111.0" layoutY="96.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="13.0" layoutY="98.0" text="User ID" />
+            <TextField fx:id="userNameField" layoutX="110.0" layoutY="137.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="12.0" layoutY="139.0" text="User Name" />
+            <TextField fx:id="userPasswordField" layoutX="111.0" layoutY="177.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="13.0" layoutY="179.0" text="Password:" />
+            <TextField fx:id="userContactField" layoutX="111.0" layoutY="216.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="10.0" layoutY="220.0" text="Contact No:" />
+            <TextField fx:id="userPositionField" layoutX="110.0" layoutY="258.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="10.0" layoutY="262.0" text="Position:" />
+            <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter user details..." />
+            <Button fx:id="btnUAdd" alignment="CENTER" layoutX="86.0" layoutY="311.0" mnemonicParsing="false" onAction="#clkUAdd" style="-fx-background-color: #230764;" text="ADD" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Futura Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUEdit" alignment="CENTER" layoutX="127.0" layoutY="311.0" mnemonicParsing="false" onAction="#clkUEdit" style="-fx-background-color: #230764;" text="EDIT" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Futura Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUDelete" alignment="CENTER" layoutX="167.0" layoutY="311.0" mnemonicParsing="false" onAction="#clkUDelete" style="-fx-background-color: #230764;" text="DELETE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Futura Bold" size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <VBox layoutY="-1.0" prefHeight="500.0" prefWidth="185.0" style="-fx-background-color: #e0e7ff; -fx-background-radius: 0 20px 20px 0;" styleClass="shadow-pane">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="185.0" />
+            <Pane prefHeight="489.0" prefWidth="185.0">
+               <children>
+                  <Button fx:id="btnProducts" layoutX="9.0" mnemonicParsing="false" onAction="#ClickBtnProducts" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Products" textAlignment="CENTER" />
+                  <Button fx:id="btnCurrentStock" layoutX="9.0" layoutY="48.0" mnemonicParsing="false" onAction="#ClickbtnCurrentStock" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Current Stock" textAlignment="CENTER" />
+                  <Button fx:id="btnCustomers" layoutX="8.0" layoutY="96.0" mnemonicParsing="false" onAction="#ClickbtnCustomers" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Customers" textAlignment="CENTER" />
+                  <Button fx:id="btnSuppliers" layoutX="8.0" layoutY="144.0" mnemonicParsing="false" onAction="#ClickbtnSuppliers" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Suppliers" textAlignment="CENTER" />
+                  <Button fx:id="btnSales" layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#ClickbtnSales" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Sales" textAlignment="CENTER" />
+                  <Button fx:id="btnPurchase" layoutX="10.0" layoutY="240.0" mnemonicParsing="false" onAction="#clickbtnPurchase" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Purchase" textAlignment="CENTER" />
+                  <Button fx:id="btnusr" layoutX="9.0" layoutY="288.0" mnemonicParsing="false" onAction="#clkusr" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #002e99;" styleClass="pretty-button" text="Users" textAlignment="CENTER" />
+                  <Button fx:id="btncategories" layoutX="9.0" layoutY="336.0" mnemonicParsing="false" onAction="#clkCategories" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Categories" textAlignment="CENTER" />
+                  <Button fx:id="btnLogout" layoutX="42.0" layoutY="417.0" mnemonicParsing="false" onAction="#logout" prefHeight="37.0" prefWidth="100.0" styleClass="pretty-button" text="Log Out" textAlignment="CENTER" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

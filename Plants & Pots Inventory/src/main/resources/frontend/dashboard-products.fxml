@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #c9d6ff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.Controller">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <Text layoutX="227.0" layoutY="54.0" lineSpacing="0.24" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCTS" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Futura Bold" size="25.0" />
+         </font>
+      </Text>
+      <Pane layoutX="233.0" layoutY="72.0" prefHeight="383.0" prefWidth="305.0" style="-fx-border-color: #230764;">
+         <children>
+            <TextField fx:id="productIDField" layoutX="111.0" layoutY="60.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="13.0" layoutY="62.0" text="Product ID:" />
+            <TextField fx:id="productNameField" layoutX="110.0" layoutY="184.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="12.0" layoutY="186.0" text="Product Name:" />
+            <TextField fx:id="productSizeField" layoutX="111.0" layoutY="263.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="13.0" layoutY="265.0" text="Size:" />
+            <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter product details..." />
+            <Button fx:id="btnPrAdd" alignment="CENTER" layoutX="86.0" layoutY="311.0" mnemonicParsing="false" onAction="#clkPAdd" style="-fx-background-color: #230764;" text="ADD" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Futura Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPrEdit" alignment="CENTER" layoutX="127.0" layoutY="311.0" mnemonicParsing="false" onAction="#clkPEdit" style="-fx-background-color: #230764;" text="EDIT" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Futura Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPrDelete" alignment="CENTER" layoutX="167.0" layoutY="311.0" mnemonicParsing="false" onAction="#clkPDelete" style="-fx-background-color: #230764;" text="DELETE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Futura Bold" size="10.0" />
+               </font>
+            </Button>
+            <TextField fx:id="productPriceField" layoutX="111.0" layoutY="224.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="13.0" layoutY="226.0" text="Price:" />
+            <Label layoutX="13.0" layoutY="105.0" text="Category ID:" />
+            <ComboBox fx:id="categoryComboBox" layoutX="111.0" layoutY="101.0" prefHeight="25.0" prefWidth="175.0" promptText="Select a category ID..." />
+            <Label layoutX="13.0" layoutY="146.0" text="Supplier ID:" />
+            <ComboBox fx:id="supplierComboBox" layoutX="111.0" layoutY="142.0" prefHeight="25.0" prefWidth="175.0" promptText="Select a supplier ID" />
+         </children>
+      </Pane>
+      <VBox layoutY="-1.0" prefHeight="500.0" prefWidth="185.0" style="-fx-background-color: #e0e7ff; -fx-background-radius: 0 20px 20px 0;" styleClass="shadow-pane">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="185.0" />
+            <Pane prefHeight="488.0" prefWidth="185.0">
+               <children>
+                  <Button fx:id="btnProducts" layoutX="9.0" mnemonicParsing="false" onAction="#ClickBtnProducts" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #002e99;" styleClass="pretty-button" text="Products" textAlignment="CENTER" />
+                  <Button fx:id="btnCurrentStock" layoutX="9.0" layoutY="48.0" mnemonicParsing="false" onAction="#ClickbtnCurrentStock" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Current Stock" textAlignment="CENTER" />
+                  <Button fx:id="btnCustomers" layoutX="8.0" layoutY="96.0" mnemonicParsing="false" onAction="#ClickbtnCustomers" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Customers" textAlignment="CENTER" />
+                  <Button fx:id="btnSuppliers" layoutX="8.0" layoutY="144.0" mnemonicParsing="false" onAction="#ClickbtnSuppliers" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Suppliers" textAlignment="CENTER" />
+                  <Button fx:id="btnSales" layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#ClickbtnSales" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Sales" textAlignment="CENTER" />
+                  <Button fx:id="btnPurchase" layoutX="10.0" layoutY="240.0" mnemonicParsing="false" onAction="#clickbtnPurchase" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Purchase" textAlignment="CENTER" />
+                  <Button fx:id="btnusr" layoutX="9.0" layoutY="288.0" mnemonicParsing="false" onAction="#clkusr" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Users" textAlignment="CENTER" />
+                  <Button fx:id="btncategories" layoutX="9.0" layoutY="336.0" mnemonicParsing="false" onAction="#clkusr" prefHeight="25.0" prefWidth="168.0" styleClass="pretty-button" text="Categories" textAlignment="CENTER" />
+                  <Button fx:id="btnLogout" layoutX="42.0" layoutY="417.0" mnemonicParsing="false" onAction="#logout" prefHeight="37.0" prefWidth="100.0" styleClass="pretty-button" text="Log Out" textAlignment="CENTER" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
